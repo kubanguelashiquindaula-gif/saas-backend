@@ -12,7 +12,7 @@ const pool = new Pool({
 });
 
 app.get("/", (req, res) => {
-  res.send("API SaaS Angola funcionando 🚀");
+  const res = await fetch("https://saas-backend.onrender.com/test-db");
 });
 
 app.get("/test-db", async (req, res) => {
