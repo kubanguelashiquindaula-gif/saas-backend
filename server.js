@@ -12,7 +12,7 @@ const pool = new Pool({
 });
 
 app.get("/", (req, res) => {
-  const res = await fetch("https://saas-backend.onrender.com/test-db");
+  const result = await pool.query("SELECT NOW()");
 });
 
 app.get("/test-db", async (req, res) => {
